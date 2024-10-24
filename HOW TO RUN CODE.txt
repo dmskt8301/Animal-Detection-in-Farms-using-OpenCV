@@ -1,0 +1,18 @@
+STEPS FOR EXECUTING THE PROJECT 
+1.	Import all the Libraries/packages. 
+2.	Load the pretrained ImageNet SSD model. 
+3.	Load MobileNetSSD_deploy.prototxt.txt which defines all the layers in the model. 
+4.	Start the live video feed. 
+5.	Take the live video frame by frame as images. 
+6.	The images are then preprocessed. 
+7.	We use OpenCV's blobFromImage which performs certain preprocessing to convert it as a 4-dimensional blob. 
+8.	All the objects (if any) are detected in that blob using the model.  
+9.	If the probability of those detected exceeds a certain threshold (which is 0.2 in our case), only then we will consider that the object is present. 
+10.	The objects is then bounded in a bounding box. 
+11.	A label along with the probability of success is displayed to the user in the live feed itself. 
+12.	A siren is played if an animal is detected for a while. 
+13.	The live video feed can be closed using the key 'CTRL+C'.
+
+(or)
+
+after installing all the requirements, go to the folder open the file in cmd & run it(python main.py), dialog box will be prompted where you can show a image of animal and the model predicts whether it is an animal or not
